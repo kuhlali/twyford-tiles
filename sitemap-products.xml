@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Twyford Tiles Products Sitemap -->
+    <!-- Generated: 2023-12-27 -->
+    
+    <!-- Product 1: Porcelain Wood Plank -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=1</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1586023492125-27b2c045efd7</image:loc>
+            <image:title>Porcelain Wood Plank Tile - Natural Oak</image:title>
+            <image:caption>Premium wood-effect porcelain floor tiles for living rooms</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 2: Glossy White Ceramic -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=2</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1600607687939-ce8a6c25118c</image:loc>
+            <image:title>Glossy White Ceramic Wall Tile</image:title>
+            <image:caption>Classic glossy white tiles for bathroom and kitchen walls</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 3: Carrara Marble Effect -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=3</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1556228453-efd6c1ff04f6</image:loc>
+            <image:title>Carrara Marble Effect Tile</image:title>
+            <image:caption>Luxurious marble-effect tiles for floors and feature walls</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 4: Glass Mosaic -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=4</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1618220179428-22790b461013</image:loc>
+            <image:title>Glass Mosaic Bathroom Tile</image:title>
+            <image:caption>Vibrant glass mosaic tiles for shower areas and accents</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 5: Natural Slate -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=5</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1599809275671-b5942cabc7a2</image:loc>
+            <image:title>Natural Slate Effect Tile</image:title>
+            <image:caption>Natural slate-effect tiles for outdoor and indoor floors</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 6: Hexagon Pattern -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=6</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1565538810643-b5bdb714032a</image:loc>
+            <image:title>Hexagon Pattern Tile - Grey</image:title>
+            <image:caption>Modern hexagon geometric pattern tiles for feature walls</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 7: Matt Black -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=7</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1586023492125-27b2c045efd7</image:loc>
+            <image:title>Matt Black Floor Tile</image:title>
+            <image:caption>Sophisticated matt black floor tiles for modern interiors</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 8: Subway Tile -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=8</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1600607687939-ce8a6c25118c</image:loc>
+            <image:title>Subway Tile - White Gloss</image:title>
+            <image:caption>Classic white subway tiles for kitchens and bathrooms</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 9: Terracotta -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=9</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1599809275671-b5942cabc7a2</image:loc>
+            <image:title>Terracotta Floor Tile</image:title>
+            <image:caption>Warm terracotta floor tiles with natural clay look</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Product 10: Herringbone Pattern -->
+    <url>
+        <loc>https://twyfordtiles.co.ke/product.html?id=10</loc>
+        <lastmod>2023-12-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://images.unsplash.com/photo-1586023492125-27b2c045efd7</image:loc>
+            <image:title>Herringbone Pattern Tile</image:title>
+            <image:caption>Elegant herringbone pattern wood-effect tiles</image:caption>
+        </image:image>
+    </url>
+    
+</urlset>

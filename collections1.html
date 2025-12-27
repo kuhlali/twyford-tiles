@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections - Twyford Tiles | Premium Tiles in Kenya</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Add collections-specific CSS -->
+    <style>
+        .collections-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.95)),
+                        url('images/hero-collections.avif') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+        }
+        
+        .collections-container {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .filter-sidebar {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        
+        .filter-section {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 20px;
+        }
+        
+        .filter-section:last-child {
+            border-bottom: none;
+        }
+        
+        .filter-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .filter-options {
+            list-style: none;
+        }
+        
+        .filter-options li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-options input[type="checkbox"] {
+            margin-right: 10px;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .filter-options label {
+            cursor: pointer;
+            color: #555;
+        }
+        
+        .products-main {
+            padding: 10px;
+        }
+        
+        .size-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .size-btn {
+            padding: 8px 20px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .size-btn:hover,
+        .size-btn.active {
+            background: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+        }
+        
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .collection-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .collection-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .collection-info {
+            padding: 20px;
+        }
+        
+        .collection-info h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .collection-price {
+            color: #27ae60;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .collection-sizes {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        @media (max-width: 992px) {
+            .collections-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .filter-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Twyford Tiles</a></h1>
+                <p class="tagline">Better tiles, Better life</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html" class="active">Collections</a></li>
+                    <li><a href="quote.html">Get Quote</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+254712345678" class="call-btn"><i class="fas fa-phone"></i> Call to Order</a>
+                <a href="https://wa.me/254712345678?text=Hi%20Twyford%20Tiles,%20I'm%20interested%20in%20your%20tiles" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Collections Hero -->
+    <section class="collections-hero">
+        <div class="container">
+            <h2>Our Tile Collections</h2>
+            <p>Discover premium quality tiles for every space and style</p>
+        </div>
+    </section>
+
+    <!-- Collections Main Content -->
+    <div class="collections-container">
+        <!-- Filter Sidebar -->
+        <aside class="filter-sidebar">
+            <div class="filter-section">
+                <h3>Country</h3>
+                <ul class="filter-options">
+                    <li><input type="checkbox" id="kenya"><label for="kenya">Kenya</label></li>
+                    <li><input type="checkbox" id="uganda"><label for="uganda">Uganda</label></li>
+                    <li><input type="checkbox" id="tanzania"><label for="tanzania">Tanzania</label></li>
+                </ul>
+            </div>
+            
+            <div class="filter-section">
+                <h3>Product Category</h3>
+                <ul class="filter-options">
+                    <li><input type="checkbox" id="wall"><label for="wall">Wall tile</label></li>
+                    <li><input type="checkbox" id="floor"><label for="floor">Floor tile</label></li>
+                </ul>
+            </div>
+            
+            <div class="filter-section">
+                <h3>Tile Sizes</h3>
+                <ul class="filter-options">
+                    <li><input type="checkbox" id="200x300"><label for="200x300">200×300mm</label></li>
+                    <li><input type="checkbox" id="300x600"><label for="300x600">300×600mm</label></li>
+                    <li><input type="checkbox" id="300x300"><label for="300x300">300×300mm</label></li>
+                    <li><input type="checkbox" id="400x400"><label for="400x400">400×400mm</label></li>
+                    <li><input type="checkbox" id="600x600"><label for="600x600">600×600mm</label></li>
+                </ul>
+            </div>
+            
+            <button class="cta-btn" style="width:100%;" onclick="applyFilters()">Apply Filters</button>
+        </aside>
+        
+        <!-- Products Main Area -->
+        <main class="products-main">
+            <div class="size-filters">
+                <button class="size-btn active" data-size="all">All Sizes</button>
+                <button class="size-btn" data-size="600x600">600×600mm</button>
+                <button class="size-btn" data-size="300x600">300×600mm</button>
+                <button class="size-btn" data-size="400x400">400×400mm</button>
+                <button class="size-btn" data-size="300x300">300×300mm</button>
+            </div>
+            
+            <div class="collections-grid" id="collectionsGrid">
+                <!-- Products will load here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Twyford Tiles</h3>
+                    <p>Better tiles, Better life</p>
+                    <p>Bringing elegance and durability to homes across Kenya.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/twyfordtileskenya" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/twyfordtiles" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/twyfordtiles" target="_blank" title="Twitter/X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://tiktok.com/@twyfordtiles" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/twyfordtiles" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtube.com/@twyfordtiles" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="quote.html">Get Quote</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:sales@twyfordtiles.co.ke">sales@twyfordtiles.co.ke</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Business Hours</h3>
+                    <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                    <p>Saturday: 9:00 AM - 4:00 PM</p>
+                    <p>Sunday: 12:00 PM - 4:00 PM</p>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2023 Twyford Tiles Kenya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/254712345678?text=Hi,%20I'm%20interested%20in%20your%20tiles" class="fixed-whatsapp" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/scripts.js"></script>
+    
+    <!-- ADD THIS JAVASCRIPT TO LOAD PRODUCTS -->
+    <script>
+        // Collections Data
+        const collections = [
+            {
+                id: 1,
+                name: "Porcelain Wood Tile - Natural Oak",
+                price: 2850,
+                image: "images/floor-tile.avif",
+                category: "floor",
+                size: "600x600",
+                country: "kenya",
+                description: "Premium wood-effect porcelain floor tiles"
+            },
+            {
+                id: 2,
+                name: "Glossy White Wall Tile",
+                price: 1650,
+                image: "images/wall-tiles.avif",
+                category: "wall",
+                size: "300x600",
+                country: "kenya",
+                description: "Classic glossy white ceramic tiles for walls"
+            },
+            {
+                id: 3,
+                name: "Carrara Marble Effect Tile",
+                price: 3200,
+                image: "images/floor-tiles.avif",
+                category: "floor",
+                size: "600x600",
+                country: "kenya",
+                description: "Luxury marble-effect floor tiles"
+            },
+            {
+                id: 4,
+                name: "Glass Mosaic Bathroom Tile",
+                price: 2150,
+                image: "https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                category: "wall",
+                size: "300x300",
+                country: "kenya",
+                description: "Glass mosaic tiles for shower areas"
+            },
+            {
+                id: 5,
+                name: "Slate Floor Tile",
+                price: 2950,
+                image: "https://images.unsplash.com/photo-1599809275671-b5942cabc7a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                category: "floor",
+                size: "400x400",
+                country: "kenya",
+                description: "Natural slate-effect outdoor tiles"
+            },
+            {
+                id: 6,
+                name: "Hexagon Pattern Tile",
+                price: 2450,
+                image: "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                category: "wall",
+                size: "300x600",
+                country: "kenya",
+                description: "Modern geometric pattern wall tiles"
+            },
+            {
+                id: 7,
+                name: "Matt Black Floor Tile",
+                price: 2750,
+                image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                category: "floor",
+                size: "600x600",
+                country: "kenya",
+                description: "Sophisticated matt black floor tiles"
+            },
+            {
+                id: 8,
+                name: "Subway Tile - White Gloss",
+                price: 1850,
+                image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+                category: "wall",
+                size: "200x300",
+                country: "kenya",
+                description: "Classic white subway tiles with glossy finish"
+            }
+        ];
+
+        // Function to display collections
+        function displayCollections() {
+            const grid = document.getElementById('collectionsGrid');
+            if (!grid) return;
+            
+            grid.innerHTML = '';
+            
+            collections.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'collection-card';
+                card.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" 
+                         onerror="this.src='https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                    <div class="collection-info">
+                        <h3>${item.name}</h3>
+                        <div class="collection-price">KES ${item.price.toLocaleString()}</div>
+                        <div class="collection-sizes">Size: ${item.size} | ${item.category} tile</div>
+                        <button class="buy-btn" onclick="addToCart(${item.id})">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                        <a href="product.html?id=${item.id}" class="view-details" style="display:block; margin-top:10px;">View Details →</a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filter functions
+        function applyFilters() {
+            alert('Filter functionality would be implemented here');
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', displayCollections);
+    </script>
+</body>
+</html>

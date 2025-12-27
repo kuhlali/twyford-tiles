@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Twyford Tiles | Tile Suppliers Kenya</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Additional styles for contact page */
+        .contact-hero {
+            background: linear-gradient(rgba(34, 34, 34, 0.9), rgba(34, 34, 34, 0.95)), /* Dark overlay */
+                        url('images/hero-contact.avif') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            border: 1px solid #eee;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .contact-method:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .contact-icon {
+            background: #222; /* Changed from #2c3e50 to #222 */
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            color: #222; /* Changed from #2c3e50 to #222 */
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-details p {
+            color: #666; /* Changed from #7f8c8d to #666 */
+            margin-bottom: 5px;
+        }
+        
+        .contact-details a {
+            color: #ffc72c; /* Changed from #27ae60 to #ffc72c (yellow) */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .contact-details a:hover {
+            color: #e6b328; /* Darker yellow */
+            text-decoration: underline;
+        }
+        
+        .business-hours {
+            background: #f5f5f5;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #eee;
+        }
+        
+        .hour-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .hour-row:last-child {
+            border-bottom: none;
+        }
+        
+        .map-container {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            border: 1px solid #eee;
+        }
+        
+        .map-placeholder {
+            background: #f5f5f5;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+        }
+        
+        .map-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #ddd;
+        }
+        
+        /* Form Styles */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .form-group label {
+            color: #222;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 15px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: #555;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ffc72c; /* Yellow focus */
+            box-shadow: 0 0 0 2px rgba(255, 199, 44, 0.1);
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #ffc72c; /* Yellow checkbox */
+        }
+        
+        .submit-btn {
+            background: #ffc72c; /* Yellow button */
+            color: #222; /* Dark text */
+            border: none;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+            margin-top: 10px;
+        }
+        
+        .submit-btn:hover {
+            background: #e6b328; /* Darker yellow */
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 199, 44, 0.3);
+        }
+        
+        /* FAQ Styles */
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .faq-item h4 {
+            color: #222;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .faq-item p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .view-all-faq {
+            color: #ffc72c;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        
+        .view-all-faq:hover {
+            text-decoration: underline;
+        }
+        
+        /* Team Contact Styles */
+        .team-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .team-member {
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 6px;
+            border-left: 3px solid #ffc72c; /* Yellow accent border */
+        }
+        
+        .team-member h4 {
+            color: #222;
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .team-member p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        
+        .team-member a {
+            color: #ffc72c;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .team-member a:hover {
+            text-decoration: underline;
+        }
+        
+        /* WhatsApp link style */
+        .whatsapp-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: white !important;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+            margin-top: 5px;
+        }
+        
+        .whatsapp-link:hover {
+            background: #1da851;
+            text-decoration: none;
+        }
+        
+        /* Get directions link */
+        .get-directions {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 5px;
+        }
+        
+        /* Form error styles */
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+            border-color: #e74c3c;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-method {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .contact-icon {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Twyford Tiles</a></h1>
+                <p class="tagline">Better tiles, Better life</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="quote.html">Get Quote</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+254712345678" class="call-btn"><i class="fas fa-phone"></i> Call to Order</a>
+                <a href="https://wa.me/254712345678?text=Hi%20Twyford%20Tiles,%20I'm%20interested%20in%20your%20tiles" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact Twyford Tiles</h1>
+            <p>Get in touch with Kenya's premium tile supplier</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="contact-info-card">
+                    <h2 style="color: #222; margin-bottom: 25px;"><i class="fas fa-address-book"></i> Contact Information</h2>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Visit Our Showroom</h4>
+                            <p>Nairobi, Kenya</p>
+                            <p><em>(Exact address available upon request)</em></p>
+                            <a href="#" class="get-directions">Get Directions →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>Sales & Inquiries: <a href="tel:+254712345678">+254 712 345 678</a></p>
+                            <p>Customer Support: <a href="tel:+254701234567">+254 701 234 567</a></p>
+                            <p>Emergency: <a href="tel:+254700123456">+254 700 123 456</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>Sales: <a href="mailto:sales@twyfordtiles.co.ke">sales@twyfordtiles.co.ke</a></p>
+                            <p>Support: <a href="mailto:support@twyfordtiles.co.ke">support@twyfordtiles.co.ke</a></p>
+                            <p>General: <a href="mailto:info@twyfordtiles.co.ke">info@twyfordtiles.co.ke</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp Business</h4>
+                            <p>Chat with us for quick quotes and inquiries</p>
+                            <a href="https://wa.me/254712345678" class="whatsapp-link" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Start Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="business-hours">
+                        <h4 style="color: #222; margin-bottom: 15px;">Business Hours</h4>
+                        <div class="hour-row">
+                            <span>Monday - Friday</span>
+                            <span>8:00 AM - 6:00 PM</span>
+                        </div>
+                        <div class="hour-row">
+                            <span>Saturday</span>
+                            <span>9:00 AM - 4:00 PM</span>
+                        </div>
+                        <div class="hour-row">
+                            <span>Sunday</span>
+                            <span>11:00 AM - 3:00 PM</span>
+                        </div>
+                        <div class="hour-row">
+                            <span>Public Holidays</span>
+                            <span>By Appointment Only</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card">
+                    <h2 style="color: #222; margin-bottom: 25px;"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h4>Do you offer installation services?</h4>
+                        <p>Yes, we have certified tile installers available. Installation costs are quoted separately based on project requirements.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>What is your delivery time?</h4>
+                        <p>Within Nairobi: 1-2 business days. Other regions: 3-5 business days depending on location.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>Do you provide samples?</h4>
+                        <p>Yes, we provide free tile samples. Contact us to request samples of your preferred tiles.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h4>What payment methods do you accept?</h4>
+                        <p>We accept M-Pesa, bank transfer, credit/debit cards, and cash.</p>
+                    </div>
+                    
+                    <a href="#" class="view-all-faq">View All FAQs →</a>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <div class="contact-info-card">
+                    <h2 style="color: #222; margin-bottom: 25px;"><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+                    <p style="color: #666; margin-bottom: 25px;">Fill out the form below and we'll respond within 24 hours.</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="contactName">Full Name *</label>
+                            <input type="text" id="contactName" name="contactName" required placeholder="Your full name">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contactPhone">Phone Number *</label>
+                                <input type="tel" id="contactPhone" name="contactPhone" required placeholder="+254 XXX XXX XXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="contactEmail">Email Address *</label>
+                                <input type="email" id="contactEmail" name="contactEmail" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="quote">Request a Quote</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="installation">Installation Inquiry</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="contactMessage" rows="6" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" checked>
+                                <span>Subscribe to our newsletter for updates and promotions</span>
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <p>Location Map</p>
+                        <small>Map integration available with Google Maps API</small>
+                    </div>
+                </div>
+                
+                <div class="contact-info-card" style="margin-top: 30px;">
+                    <h2 style="color: #222; margin-bottom: 20px;"><i class="fas fa-users"></i> Our Team</h2>
+                    <p style="color: #666; margin-bottom: 15px;">Our dedicated team is ready to assist you:</p>
+                    
+                    <div class="team-contact">
+                        <div class="team-member">
+                            <h4>Sales Department</h4>
+                            <p>For product inquiries, quotes, and orders</p>
+                            <a href="mailto:sales@twyfordtiles.co.ke">sales@twyfordtiles.co.ke</a>
+                        </div>
+                        
+                        <div class="team-member">
+                            <h4>Technical Support</h4>
+                            <p>For installation advice and technical questions</p>
+                            <a href="mailto:support@twyfordtiles.co.ke">support@twyfordtiles.co.ke</a>
+                        </div>
+                        
+                        <div class="team-member">
+                            <h4>Accounts Department</h4>
+                            <p>For billing and payment inquiries</p>
+                            <a href="mailto:accounts@twyfordtiles.co.ke">accounts@twyfordtiles.co.ke</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-msg">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <p>Total: KES <span id="cartTotal">0</span></p>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Twyford Tiles</h3>
+                    <p>Better tiles, Better life</p>
+                    <p>Bringing elegance and durability to homes across Kenya.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/twyfordtileskenya" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/twyfordtiles" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/twyfordtiles" target="_blank" title="Twitter/X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://tiktok.com/@twyfordtiles" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/twyfordtiles" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtube.com/@twyfordtiles" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="quote.html">Get Quote</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+254701234567">+254 701 234 567</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:sales@twyfordtiles.co.ke">sales@twyfordtiles.co.ke</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@twyfordtiles.co.ke">info@twyfordtiles.co.ke</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Business Hours</h3>
+                    <p><strong>Mon - Fri:</strong> 8:00 AM - 6:00 PM</p>
+                    <p><strong>Saturday:</strong> 9:00 AM - 4:00 PM</p>
+                    <p><strong>Sunday:</strong> 11:00 AM - 3:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2023 Twyford Tiles Kenya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/254712345678?text=Hi%20Twyford%20Tiles,%20I'm%20interested%20in%20your%20tiles" class="fixed-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>

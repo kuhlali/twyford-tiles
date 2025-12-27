@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Twyford Tiles - Premium quality tiles in Kenya. Ceramic, porcelain, and mosaic tiles with free delivery in Nairobi.">
+    <meta name="keywords" content="tiles Kenya, ceramic tiles Nairobi, floor tiles, wall tiles, bathroom tiles, kitchen tiles, buy tiles online Kenya">
+    <meta name="author" content="Twyford Tiles Kenya">
+    
+    <title>Twyford Tiles | Premium Tiles in Kenya</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Twyford Tiles</a></h1>
+                <p class="tagline">Better tiles, Better life</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="quote.html">Get Quote</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+254712345678" class="call-btn"><i class="fas fa-phone"></i> Call to Order</a>
+                <a href="https://wa.me/254712345678?text=Hi%20Twyford%20Tiles,%20I'm%20interested%20in%20your%20tiles" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Transform Your Space with Premium Tiles</h2>
+            <p>Ceramic, Porcelain & Mosaic Tiles at Best Prices in Kenya</p>
+            <a href="collections.html" class="cta-btn">Shop Collections</a>
+            <a href="quote.html" class="cta-btn secondary" style="margin-left: 15px;">Get Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Our Tile Categories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="images/floor-tiles.avif" alt="Floor Tiles">
+                    <h3>Floor Tiles</h3>
+                    <p>Durable & stylish tiles for living rooms, kitchens, and more.</p>
+                    <a href="collections.html?category=floor" class="category-link">View Floor Tiles →</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/wall-tiles.avif" alt="Wall Tiles">
+                    <h3>Wall Tiles</h3>
+                    <p>Beautiful wall finishes for bathrooms and feature walls.</p>
+                    <a href="collections.html?category=wall" class="category-link">View Wall Tiles →</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/kitchen-tiles.avif" alt="Kitchen Tiles">
+                    <h3>Kitchen Tiles</h3>
+                    <p>Easy-to-clean, heat-resistant backsplashes and floors.</p>
+                    <a href="collections.html?category=kitchen" class="category-link">View Kitchen Tiles →</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/bathroom-tiles.avif" alt="Bathroom Tiles">
+                    <h3>Bathroom Tiles</h3>
+                    <p>Waterproof, slip-resistant tiles for bathrooms.</p>
+                    <a href="collections.html?category=bathroom" class="category-link">View Bathroom Tiles →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid" id="featuredProducts">
+                <!-- Featured products loaded by JavaScript -->
+            </div>
+            <div class="text-center">
+                <a href="collections.html" class="cta-btn secondary">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">Why Choose Twyford Tiles?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Premium Tiles Supplier in Kenya Since 2010</h3>
+                    <p>At Twyford Tiles, we specialize in providing high-quality ceramic, porcelain, and mosaic tiles for residential and commercial projects across Kenya. With over 13 years of experience, we've become a trusted name in the tile industry.</p>
+                    
+                    <div class="features-grid">
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <h4>Quality Guarantee</h4>
+                            <p>All our tiles meet international quality standards with 2-year warranty.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-shipping-fast"></i>
+                            <h4>Free Delivery</h4>
+                            <p>Free delivery within Nairobi for orders above KES 20,000.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-hard-hat"></i>
+                            <h4>Expert Installation</h4>
+                            <p>Professional tile installation services available.</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Trusted Supplier</h4>
+                            <p>Official distributor of leading tile brands worldwide.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-proof">
+                        <div class="stat">
+                            <h4>5,000+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h4>50+</h4>
+                            <p>Tile Collections</p>
+                        </div>
+                        <div class="stat">
+                            <h4>100%</h4>
+                            <p>Satisfaction Guarantee</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/twyford-tiles-showroom.avif" alt="Twyford Tiles Showroom">
+                    <div class="experience-badge">
+                        <span>13+ Years</span>
+                        <small>Experience</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Space?</h2>
+            <p>Get a free quote or visit our showroom to see our tile collections</p>
+            <div class="cta-buttons">
+                <a href="quote.html" class="cta-btn"><i class="fas fa-file-alt"></i> Get Free Quote</a>
+                <a href="contact.html" class="cta-btn secondary"><i class="fas fa-map-marker-alt"></i> Visit Showroom</a>
+                <a href="tel:+254712345678" class="cta-btn outline"><i class="fas fa-phone"></i> Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-msg">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <p>Total: KES <span id="cartTotal">0</span></p>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Twyford Tiles</h3>
+                    <p>Better tiles, Better life</p>
+                    <p>Bringing elegance and durability to homes across Kenya.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/twyfordtileskenya" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/twyfordtiles" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/twyfordtiles" target="_blank" title="Twitter/X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://tiktok.com/@twyfordtiles" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/twyfordtiles" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtube.com/@twyfordtiles" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="quote.html">Get Quote</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+254701234567">+254 701 234 567</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:sales@twyfordtiles.co.ke">sales@twyfordtiles.co.ke</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@twyfordtiles.co.ke">info@twyfordtiles.co.ke</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Business Hours</h3>
+                    <p><strong>Mon - Fri:</strong> 8:00 AM - 6:00 PM</p>
+                    <p><strong>Saturday:</strong> 9:00 AM - 4:00 PM</p>
+                    <p><strong>Sunday:</strong> 11:00 AM - 3:00 PM</p>
+                    <div class="payment-methods">
+                        <p><strong>We Accept:</strong></p>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-m-pesa" title="M-Pesa"></i>
+                            <i class="fab fa-cc-visa" title="Visa"></i>
+                            <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                            <i class="fas fa-money-bill-wave" title="Cash"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2023 Twyford Tiles Kenya. All rights reserved. | Proudly serving Kenya since 2010</p>
+                <p class="developer-credit">Website designed for optimal user experience</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/254712345678?text=Hi%20Twyford%20Tiles,%20I'm%20interested%20in%20your%20tiles" class="fixed-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/scripts.js"></script>
+    <script>
+    // Products data - same as in product.html
+    const products = [
+        {
+            id: 1,
+            name: "Porcelain Wood Tile - Natural Oak",
+            price: 2850,
+            image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            category: "floor",
+            size: "600x600",
+            description: "Premium wood-effect porcelain floor tiles with realistic natural oak finish."
+        },
+        {
+            id: 2,
+            name: "Glossy White Wall Tile",
+            price: 1650,
+            image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            category: "wall",
+            size: "300x600",
+            description: "Classic glossy white ceramic tiles for bathroom and kitchen walls."
+        },
+        {
+            id: 3,
+            name: "Carrara Marble Effect Tile",
+            price: 3200,
+            image: "https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            category: "floor",
+            size: "600x600",
+            description: "Luxurious marble-effect tiles for floors and feature walls."
+        },
+        {
+            id: 4,
+            name: "Glass Mosaic Tile - Blue Mix",
+            price: 2150,
+            image: "https://images.unsplash.com/photo-1618220179428-22790b461013?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+            category: "wall",
+            size: "300x300",
+            description: "Vibrant glass mosaic tiles for shower areas and bathroom accents."
+        }
+    ];
+
+    // Display featured products on homepage
+    document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('featuredProducts');
+        if (!container) return;
+
+        // Get first 4 products as featured
+        const featured = products.slice(0, 4);
+        
+        // Clear loading message
+        container.innerHTML = '';
+        
+        // Add each product
+        featured.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+            productCard.innerHTML = `
+                <img src="${product.image}" alt="${product.name}" 
+                     onerror="this.src='https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80'">
+                <h3>${product.name}</h3>
+                <p class="price">KES ${product.price.toLocaleString()}</p>
+                <p class="description">${product.description}</p>
+                <button class="buy-btn" onclick="addToCart(${product.id})">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </button>
+                <a href="product.html?id=${product.id}" class="view-details">View Details →</a>
+            `;
+            container.appendChild(productCard);
+        });
+    });
+</script>
+</body>
+</html>

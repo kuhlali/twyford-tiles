@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote - Twyford Tiles | Free Tile Quote Kenya</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">Twyford Tiles</a></h1>
+                <p class="tagline">Better tiles, Better life</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="quote.html" class="active">Get Quote</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="tel:+254712345678" class="call-btn"><i class="fas fa-phone"></i> Call to Order</a>
+                <a href="https://wa.me/254712345678?text=Hi%20Twyford%20Tiles,%20I'm%20interested%20in%20your%20tiles" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quote Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Get a Free Tile Quote</h1>
+            <p>Fill out the form below and we'll get back to you within 24 hours with a detailed quote</p>
+        </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section class="quote-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2><i class="fas fa-file-invoice-dollar"></i> Request Your Quote</h2>
+                    <p>Complete this form for a detailed quotation including product costs and installation estimates</p>
+                </div>
+                
+                <form id="quoteForm" class="quote-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName"><i class="fas fa-user"></i> Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" required placeholder="Enter your full name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="e.g., +254 712 345 678">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="location"><i class="fas fa-map-marker-alt"></i> Location *</label>
+                            <input type="text" id="location" name="location" required placeholder="e.g., Nairobi, Karen">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="projectType"><i class="fas fa-home"></i> Project Type *</label>
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select project type</option>
+                            <option value="residential">Residential Home</option>
+                            <option value="commercial">Commercial Building</option>
+                            <option value="office">Office Space</option>
+                            <option value="hotel">Hotel/Resort</option>
+                            <option value="apartment">Apartment Complex</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="areas"><i class="fas fa-layer-group"></i> Areas to Tile *</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="areas" value="living-room">
+                                <span class="checkmark"></span>
+                                Living Room
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="areas" value="kitchen">
+                                <span class="checkmark"></span>
+                                Kitchen
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="areas" value="bathroom">
+                                <span class="checkmark"></span>
+                                Bathroom
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="areas" value="bedroom">
+                                <span class="checkmark"></span>
+                                Bedroom
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="areas" value="outdoor">
+                                <span class="checkmark"></span>
+                                Outdoor/Patio
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="areas" value="floor">
+                                <span class="checkmark"></span>
+                                Whole Floor
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="areaSize"><i class="fas fa-ruler-combined"></i> Total Area (Square Meters) *</label>
+                            <input type="number" id="areaSize" name="areaSize" required placeholder="e.g., 50" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="budget"><i class="fas fa-money-bill-wave"></i> Approximate Budget (KES)</label>
+                            <select id="budget" name="budget">
+                                <option value="">Select budget range</option>
+                                <option value="under-50000">Under KES 50,000</option>
+                                <option value="50000-100000">KES 50,000 - 100,000</option>
+                                <option value="100000-250000">KES 100,000 - 250,000</option>
+                                <option value="250000-500000">KES 250,000 - 500,000</option>
+                                <option value="over-500000">Over KES 500,000</option>
+                                <option value="not-sure">Not sure yet</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tileTypes"><i class="fas fa-tags"></i> Tile Types Interested In</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="tileTypes" value="ceramic">
+                                <span class="checkmark"></span>
+                                Ceramic Tiles
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="tileTypes" value="porcelain">
+                                <span class="checkmark"></span>
+                                Porcelain Tiles
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="tileTypes" value="mosaic">
+                                <span class="checkmark"></span>
+                                Mosaic Tiles
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="tileTypes" value="natural-stone">
+                                <span class="checkmark"></span>
+                                Natural Stone
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="tileTypes" value="vitrified">
+                                <span class="checkmark"></span>
+                                Vitrified Tiles
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="tileTypes" value="wood-effect">
+                                <span class="checkmark"></span>
+                                Wood Effect
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredColor"><i class="fas fa-palette"></i> Preferred Colors</label>
+                        <div class="color-selection">
+                            <div class="color-option" data-color="white" style="background-color: #ffffff;"></div>
+                            <div class="color-option" data-color="beige" style="background-color: #f5f5dc;"></div>
+                            <div class="color-option" data-color="grey" style="background-color: #808080;"></div>
+                            <div class="color-option" data-color="brown" style="background-color: #8b4513;"></div>
+                            <div class="color-option" data-color="black" style="background-color: #000000;"></div>
+                            <div class="color-option" data-color="blue" style="background-color: #4169e1;"></div>
+                            <div class="color-option" data-color="green" style="background-color: #228b22;"></div>
+                            <div class="color-option" data-color="multi" style="background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);"></div>
+                        </div>
+                        <input type="hidden" id="selectedColors" name="selectedColors">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="timeline"><i class="fas fa-calendar-alt"></i> Project Timeline</label>
+                        <select id="timeline" name="timeline">
+                            <option value="">Select timeline</option>
+                            <option value="immediately">Immediately</option>
+                            <option value="1-2-weeks">Within 1-2 weeks</option>
+                            <option value="1-month">Within 1 month</option>
+                            <option value="1-3-months">1-3 months</option>
+                            <option value="planning">Still planning</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalServices"><i class="fas fa-tools"></i> Additional Services Needed</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="installation">
+                                <span class="checkmark"></span>
+                                Professional Installation
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="design">
+                                <span class="checkmark"></span>
+                                Design Consultation
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="delivery">
+                                <span class="checkmark"></span>
+                                Delivery Only
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="material">
+                                <span class="checkmark"></span>
+                                Materials Only
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message"><i class="fas fa-comment-alt"></i> Additional Details</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us more about your project, specific requirements, or ask any questions..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="referenceImages"><i class="fas fa-image"></i> Reference Images (Optional)</label>
+                        <input type="file" id="referenceImages" name="referenceImages" multiple accept="image/*">
+                        <small class="file-hint">You can upload inspiration photos or floor plans (max 5 images, 5MB each)</small>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Submit Quote Request
+                        </button>
+                        <p class="form-note">By submitting, you agree to our <a href="#">Privacy Policy</a>. We'll contact you within 24 hours.</p>
+                    </div>
+                </form>
+                
+                <div class="form-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-clock"></i> Quick Quote via WhatsApp</h3>
+                        <p>For faster response, send us directly on WhatsApp:</p>
+                        <a href="https://wa.me/254712345678?text=Hi%20Twyford%20Tiles,%20I%20need%20a%20quote%20for%20tiles" class="whatsapp-btn" target="_blank" style="width: 100%; justify-content: center;">
+                            <i class="fab fa-whatsapp"></i> Get Instant Quote on WhatsApp
+                        </a>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-phone"></i> Call for Quote</h3>
+                        <p>Speak directly with our sales team:</p>
+                        <a href="tel:+254712345678" class="call-btn" style="width: 100%; justify-content: center;">
+                            <i class="fas fa-phone"></i> Call: +254 712 345 678
+                        </a>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-check-circle"></i> What's Included</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Detailed product pricing</li>
+                            <li><i class="fas fa-check"></i> Installation cost estimate</li>
+                            <li><i class="fas fa-check"></i> Delivery charges</li>
+                            <li><i class="fas fa-check"></i> Sample tile options</li>
+                            <li><i class="fas fa-check"></i> Professional advice</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-star"></i> Why Choose Us</h3>
+                        <ul>
+                            <li><i class="fas fa-shield-alt"></i> 2-Year Quality Warranty</li>
+                            <li><i class="fas fa-truck"></i> Free Nairobi Delivery</li>
+                            <li><i class="fas fa-hard-hat"></i> Certified Installers</li>
+                            <li><i class="fas fa-money-bill-wave"></i> Best Price Guarantee</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart-msg">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <p>Total: KES <span id="cartTotal">0</span></p>
+            <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            <button class="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Twyford Tiles</h3>
+                    <p>Better tiles, Better life</p>
+                    <p>Bringing elegance and durability to homes across Kenya.</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/twyfordtileskenya" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://instagram.com/twyfordtiles" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com/twyfordtiles" target="_blank" title="Twitter/X">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://tiktok.com/@twyfordtiles" target="_blank" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://linkedin.com/company/twyfordtiles" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://youtube.com/@twyfordtiles" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collections.html">Collections</a></li>
+                        <li><a href="quote.html">Get Quote</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+254712345678">+254 712 345 678</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+254701234567">+254 701 234 567</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:sales@twyfordtiles.co.ke">sales@twyfordtiles.co.ke</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@twyfordtiles.co.ke">info@twyfordtiles.co.ke</a></p>
+                </div>
+                <div class="footer-col">
+                    <h3>Business Hours</h3>
+                    <p><strong>Mon - Fri:</strong> 8:00 AM - 6:00 PM</p>
+                    <p><strong>Saturday:</strong> 9:00 AM - 4:00 PM</p>
+                    <p><strong>Sunday:</strong> 11:00 AM - 3:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2023 Twyford Tiles Kenya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/254712345678?text=Hi%20Twyford%20Tiles,%20I'm%20interested%20in%20your%20tiles" class="fixed-whatsapp" target="_blank" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/form-handler.js"></script>
+</body>
+</html>

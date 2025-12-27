@@ -1,0 +1,82 @@
+# Twyford Tiles Kenya - Robots.txt
+# Last Updated: December 27, 2023
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /includes/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /*.php$
+Disallow: /*.inc$
+Disallow: /*.sql$
+Disallow: /*.log$
+
+# SEO-friendly crawling
+Crawl-delay: 2
+
+# Sitemaps
+Sitemap: https://twyfordtiles.co.ke/sitemap.xml
+Sitemap: https://twyfordtiles.co.ke/sitemap-products.xml
+
+# Googlebot specific instructions
+User-agent: Googlebot
+Allow: /images/
+Allow: /css/
+Allow: /js/
+Disallow: /search/
+Disallow: /cart/
+Crawl-delay: 1
+
+# Bingbot specific instructions
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 2
+Disallow: /admin/
+
+# Social Media Crawlers
+User-agent: Twitterbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: FacebookExternalHit
+Allow: /
+Crawl-delay: 1
+
+User-agent: LinkedInBot
+Allow: /
+Crawl-delay: 1
+
+# Bad bots to block
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: dotbot
+Disallow: /
+
+User-agent: rogerbot
+Disallow: /
+
+# Image crawlers
+User-agent: Googlebot-Image
+Allow: /images/products/
+Allow: /images/categories/
+Disallow: /images/temp/
+Disallow: /images/private/
+
+# Ads bots
+User-agent: AdsBot-Google
+Allow: /
+
+# Mobile crawlers
+User-agent: Googlebot-Mobile
+Allow: /
