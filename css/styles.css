@@ -2073,3 +2073,113 @@ footer {
         margin-top: 30px;
     }
 }
+/* Bathroom Fixtures Showcase */
+.fixtures-showcase {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.fixtures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.fixture-category-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.fixture-category-card:hover {
+    transform: translateY(-10px);
+}
+
+.fixture-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.fixture-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.fixture-category-card:hover .fixture-image img {
+    transform: scale(1.05);
+}
+
+.fixture-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(44, 62, 80, 0.9));
+    color: white;
+    padding: 30px 20px 20px;
+    text-align: center;
+}
+
+.fixture-overlay h3 {
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.fixture-overlay p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+.cta-btn.small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* Complete Bathroom Packages */
+.package-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.package-card h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.package-features {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.package-features li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.package-features li:last-child {
+    border-bottom: none;
+}
+
+.package-price {
+    font-size: 2rem;
+    color: #27ae60;
+    font-weight: 700;
+    margin: 20px 0;
+}
